@@ -1,0 +1,15 @@
+<h2>WIKINIMOUS</h2>
+<ul>
+  <% @articles.each do |article| %>
+      <li><strong>Title:</strong> <%=article[:title] %> </li>
+      <li><strong>Content:</strong> <%=article[:content] %></li>
+      <%= link_to "See more", article_path(article)  %>
+  <br>
+  <br>
+  <% end %>
+</ul>
+
+<%= link_to "Add article", new_article_path %>
+
+
+
